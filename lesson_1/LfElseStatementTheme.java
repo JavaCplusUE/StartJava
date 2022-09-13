@@ -145,25 +145,23 @@ public class LfElseStatementTheme{
         int bankBonknot1 = 99;
         int bankBonknot10 = 5;
         int bankBonknot100 = 99;
-        int myBonknot100 = needMoney/100;
-        int myBonknot10 = needMoney%100/10;
-        int myBonknot1 = needMoney%10;
-        if(bankBonknot100 < myBonknot100)
-        {
+        int myBonknot100 = needMoney / 100;
+        int myBonknot10 = needMoney % 100 / 10;
+        int myBonknot1 = needMoney % 10;
+        if(bankBonknot100 < myBonknot100) {
          myBonknot100 = bankBonknot100;
          myBonknot10 =(needMoney/100 - bankBonknot100) * 10 + myBonknot10;
         }
-        if(bankBonknot10 < myBonknot10)
-        {
+        if(bankBonknot10 < myBonknot10) {
         myBonknot10 = bankBonknot10;
-        myBonknot1 = needMoney%100 - (bankBonknot10*10);
+        myBonknot1 = needMoney % 100 - (bankBonknot10 * 10);
         }
         if(bankBonknot1 < myBonknot1) {
             myBonknot1 -= bankBonknot1;
         }
         System.out.printf("В терминале номиналы блокнот: 1=%dшт 10=%dшт 100=%dшт", bankBonknot1, bankBonknot10, bankBonknot100);
         System.out.printf("\nТребуемое количество: 1=%dшт 10=%dшт 100=%dшт\n",myBonknot1, myBonknot10, myBonknot100);
-        System.out.println("Исходная сумма: " + (myBonknot100*100 + myBonknot10*10 + myBonknot1)+" руб");
+        System.out.println("Исходная сумма: " + (myBonknot100*100 + myBonknot10*10 + myBonknot1) + " руб");
 
     }
 }
