@@ -1,79 +1,74 @@
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("1. Подсчет суммы четных и нечетных чисел");
-        int num = -10;
-        int evenNum = 0;
-        int oddNum = 0;
+        int startNum = -10;
+        int sumEvenNum = 0;
+        int sumOddNum = 0;
         do {
-            num++;
-            if(num % 2 == 0) {
-                evenNum += num;
+            startNum++;
+            if(startNum % 2 == 0) {
+                sumEvenNum += startNum;
             } else {
-                oddNum += num;
+                sumOddNum += startNum;
             }
-        } while(num != 21);
-        System.out.printf("в промежутке [-10, 21] сумма четных чисел = %d, а нечетных = %d" , evenNum , oddNum);
+        } while(startNum != 21);
+        System.out.printf("в промежутке [-10, 21] сумма четных чисел = %d, а нечетных = %d" , sumEvenNum , sumOddNum);
 
         System.out.println("\n2.Вывод чисел в интервале (min и max) в порядке убывания");
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-        int minNum = 0;
-        int maxNum = 0;
-        if(num1 < num2 & num1 < num3) {
-        minNum = num1;
+        int maxNum = num2;
+        int minNum = num3;
+        
+        if (num1 > maxNum) {
+            maxNum = num1;
         }
-        if(num2 < num1 & num2 < num3) {
-        minNum = num2;
+        if (num3 > maxNum) {
+            maxNum = num3;
         }
-        if(num3 < num2 & num3 < num1) {
-        minNum = num3;
+        if (num1 < minNum) {
+         minNum = num1;
         }
-        if(num1 > num2 & num1 > num3) {
-        maxNum = num1;
+        if (num2 < minNum) {
+            minNum = num2;
         }
-        if(num2 > num1 & num2 > num3) {
-        maxNum = num2;
-        }
-        if(num3 > num2 & num3 > num1) {
-        maxNum = num3;
-        }
-       for (int i = maxNum; i >= minNum ; --i ) {
-        System.out.println(i + " ");
+        
+       for (int i = maxNum; i >= minNum ; --i) {
+        System.out.print(i + " ");
         }
 
         System.out.println("\n3.Вывод реверсивного числа и суммы его цифр");
-        num = 1234;
-        int buffer = 0;
-        int sumNum = 0;
+        int num = 1234;
+        int sumDigits = 0;
         while (num != 0) {
-            buffer = num % 10;
-            num = num / 10;
-            sumNum += buffer;
-            System.out.print(buffer);
+            int digit = num % 10;
+            num /= 10;
+            sumDigits += digit;
+            System.out.print(digit);
         }
-        System.out.println(sumNum);
+        System.out.println("\n" + sumDigits);
 
         System.out.println("\n4. Вывод чисел на консоль в несколько строк");
-        int startNum = 1;
-        int endNum = 24;
-        buffer = 0;
-        while (startNum <= endNum) {
+        int startRange = 1;
+        int endRange = 24;
+        int count = 0;
+        for (int i = startRange; i <= 3; i++) {
             for (int j = 0; j < 5; j++) {
-                buffer = startNum;
-                if (buffer > endNum) {
-                    buffer = 0;
+                count = startRange;
+                if (count > endRange) {
+                    count = 0;
                 }
-                System.out.printf(" " + buffer);
-                startNum++;
+                System.out.printf("%5s", count);
+                startRange+=2;
             }
-        System.out.println();
+            System.out.println();
         }
 
         System.out.println("\n5. Проверка количества единиц на четность");
         num = 3141591;
-        buffer = 0;
-        evenNum = 0;
+        int buffer = 0;
+        int evenNum = 0;
         int notEvenNum = 0;
         while (num != 0) {
             buffer = num % 10;
@@ -197,4 +192,5 @@ public class CyclesTheme {
             }
             System.out.println();
         }
+}
 }
