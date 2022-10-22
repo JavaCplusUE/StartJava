@@ -5,14 +5,15 @@ public class CyclesTheme {
         int sumEvenNum = 0;
         int sumOddNum = 0;
         do {
-            startNum++;
             if(startNum % 2 == 0) {
                 sumEvenNum += startNum;
             } else {
                 sumOddNum += startNum;
             }
-        } while(startNum != 21);
-        System.out.printf("в промежутке [-10, 21] сумма четных чисел = %d, а нечетных = %d" , sumEvenNum , sumOddNum);
+            startNum++;
+        } while(startNum < 22);
+        System.out.printf("в промежутке [-10, 21] сумма четных чисел = %d" , sumEvenNum);
+        System.out.printf("\nв промежутке [-10, 21] сумма нечетных чисел = %d" , sumOddNum);
 
         System.out.println("\n2.Вывод чисел в интервале (min и max) в порядке убывания");
         int num1 = 10;
@@ -28,14 +29,14 @@ public class CyclesTheme {
             maxNum = num3;
         }
         if (num1 < minNum) {
-         minNum = num1;
+            minNum = num1;
         }
         if (num2 < minNum) {
             minNum = num2;
         }
         
-       for (int i = maxNum; i >= minNum ; --i) {
-        System.out.print(i + " ");
+       for (int i = maxNum - 1; i >= minNum + 1; --i) {
+            System.out.print(i + " ");
         }
 
         System.out.println("\n3.Вывод реверсивного числа и суммы его цифр");
@@ -53,14 +54,14 @@ public class CyclesTheme {
         int startRange = 1;
         int endRange = 24;
         int count = 0;
-        for (int i = startRange; i <= 3; i++) {
+        for (int i = 1; i <= 3; i++) {
             for (int j = 0; j < 5; j++) {
                 count = startRange;
                 if (count > endRange) {
                     count = 0;
                 }
                 System.out.printf("%5s", count);
-                startRange+=2;
+                startRange += 2;
             }
             System.out.println();
         }
@@ -68,19 +69,17 @@ public class CyclesTheme {
         System.out.println("\n5. Проверка количества единиц на четность");
         num = 3141591;
         int buffer = 0;
-        int evenNum = 0;
-        int notEvenNum = 0;
+        int numUnits = 0;
         while (num != 0) {
             buffer = num % 10;
             num = num / 10;
-            if (buffer % 2 == 0) {
-                evenNum++;
-            } else {
-                notEvenNum++;
-            }
+            numUnits++;
         }
-        System.out.println("число " + num + "содержит " + evenNum + " Четное количество единиц");
-        System.out.println("число " + num + "содержит " + notEvenNum + " Нечетное количество единиц");
+        if (numUnits % 2 == 0) {
+            System.out.println("число 3141591 содержит четное количество единиц");
+        } else {
+            System.out.println("число 3141591 содержит нечетное количество единиц");
+        }
 
         System.out.println("\n6. Отображение фигур в консоли");
         for (int i = 0; i < 5; i++) {
@@ -98,7 +97,7 @@ public class CyclesTheme {
                 num2++;
             }
 
-            System.out.println("");
+            System.out.println();
             num--;
         }
 
