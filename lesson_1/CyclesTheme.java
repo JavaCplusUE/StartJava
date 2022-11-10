@@ -14,7 +14,7 @@ public class CyclesTheme {
         } while(startNum < 22);
         System.out.printf("в промежутке [-10, 21] сумма:\n");
         System.out.printf("четных чисел = %d", sumEvenNum);
-        System.out.printf("\nнечетныхчетных чисел = %d", sumOddNum);
+        System.out.printf("\nнечетных чисел = %d", sumOddNum);
 
         System.out.println("\n\n2.Вывод чисел в интервале (min и max) в порядке убывания");
         int num1 = 10;
@@ -34,7 +34,7 @@ public class CyclesTheme {
         if (num2 < minNum) {
             minNum = num2;
         }
-        for (int i = maxNum - 1; i >= minNum + 1; i--) {
+        for (int i = maxNum - 1; i > minNum; i--) {
             System.out.print(i + " ");
         }
 
@@ -67,15 +67,15 @@ public class CyclesTheme {
 
         System.out.println("\n5. Проверка количества единиц на четность");
         num = 3242592;
-        int origNum = num;
-        int numUnits = 0;
+        int copyNum = num;
+        int numOnes = 0;
         while (num != 0) {
             int digit = num % 10;
             num /= 10;
-            numUnits++;
+            numOnes++;
         }
-        System.out.print("число " + origNum + " содержит ");
-        if (numUnits % 2 == 0) {
+        System.out.print("число " + copyNum + " содержит ");
+        if (numOnes % 2 == 0) {
             System.out.println("четное количество единиц");
 
         } else {
@@ -120,21 +120,25 @@ public class CyclesTheme {
         } while (coll != row);
 
         System.out.println("\n7.Отображение ASCII-символов");
-        for(int i = 1; i < 48; i += 2) {
-            System.out.println(i);
+        System.out.println("Dec               Char");
+        int n = 0;
+        for(char i = 1; i < 48; i += 2) {
+            n = i;
+            System.out.printf("%5d", n);
+            System.out.printf("%15c %n", i);
         }
-        for(char j = 98; j < 123; j += 2) {
-            System.out.println(j);
+        for(char i = 98; i < 123; i += 2) {
+            n = i;
+            System.out.printf("%5d", n);
+            System.out.printf("%15c %n", i);
         }
 
         System.out.println("\n8. Проверка, является ли число палиндромом");
         num = 1234321;
         int reverseNum = 0;
-        int copyNum = num;
-        while(num != 0){
-            int digit = 0;
-            digit = num % 10;
-            reverseNum = reverseNum*10 + digit;
+        copyNum = num;
+        while(num != 0) {
+            reverseNum = (reverseNum*10) + (num % 10);
             num /= 10;
         }
         if(copyNum == reverseNum) {
@@ -145,7 +149,7 @@ public class CyclesTheme {
         num = 123114;
         int firstHalfNum = 0;
         int secondHalfNum = 0;
-        for (int i = 0;i < 6 ;i++ ) {
+        for (int i = 0; i < 6 ; i++) {
             if(i >= 3) {
                 secondHalfNum += num % 10;
             } else {
