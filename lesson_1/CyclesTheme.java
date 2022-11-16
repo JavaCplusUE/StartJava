@@ -72,14 +72,15 @@ public class CyclesTheme {
         while (num != 0) {
             int digit = num % 10;
             num /= 10;
-            numOnes++;
+            if(digit == 2) {
+                numOnes++;        
+            }
         }
         System.out.print("число " + copyNum + " содержит ");
         if (numOnes % 2 == 0) {
-            System.out.println("четное количество единиц");
-
+            System.out.println("четное количество двоек");
         } else {
-            System.out.println("нечетное количество единиц");
+            System.out.println("нечетное количество двоек");
         }
 
         System.out.println("\n6. Отображение фигур в консоли");
@@ -120,16 +121,13 @@ public class CyclesTheme {
         } while (coll != row);
 
         System.out.println("\n7.Отображение ASCII-символов");
-        System.out.println("Dec               Char");
-        int n = 0;
-        for(char i = 1; i < 48; i += 2) {
-            n = i;
-            System.out.printf("%5d", n);
+        System.out.printf("%5s %15s %n", "Dec", "Char");
+        for(int i = 1; i < 48; i += 2) {
+            System.out.printf("%5d", i);
             System.out.printf("%15c %n", i);
         }
-        for(char i = 98; i < 123; i += 2) {
-            n = i;
-            System.out.printf("%5d", n);
+        for(int i = 98; i < 123; i += 2) {
+            System.out.printf("%5d", i);
             System.out.printf("%15c %n", i);
         }
 
@@ -138,7 +136,7 @@ public class CyclesTheme {
         int reverseNum = 0;
         copyNum = num;
         while(num != 0) {
-            reverseNum = (reverseNum*10) + (num % 10);
+            reverseNum = (reverseNum * 10) + (num % 10);
             num /= 10;
         }
         if(copyNum == reverseNum) {
@@ -149,7 +147,7 @@ public class CyclesTheme {
         num = 123114;
         int firstHalfNum = 0;
         int secondHalfNum = 0;
-        for (int i = 0; i < 6 ; i++) {
+        for (int i = 0; i < 6; i++) {
             if(i >= 3) {
                 secondHalfNum += num % 10;
             } else {
@@ -168,16 +166,16 @@ public class CyclesTheme {
         System.out.println("\n10. Вывод таблицы умножения Пифагора");
         for (int i = 1; i <= 9; i++) {
             if (i == 1) {
-                System.out.printf("  |");
+                System.out.print("  |");
             } else {
-                System.out.printf("%5d",i);
+                System.out.printf("%5d", i);
             }
         }
         System.out.println("\n———————————————————————————————————————————");
         for (int i = 2; i <= 9; i++) {
-            System.out.printf("%d |",i);
+            System.out.printf("%d |", i);
             for(int j = 2; j <= 9; j++) {
-                System.out.printf("%5d", i*j);
+                System.out.printf("%5d", i * j);
             }
             System.out.println();
         }
