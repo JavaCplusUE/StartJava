@@ -98,7 +98,7 @@
         System.out.println("Начисленный % : " + (depositAmount * interestBank) + " руб");
         System.out.println("Итоговая сумма с % : " + (depositAmount + depositAmount * interestBank) + " руб");
 
-        System.out.println("\n7. Определение оценки по предметам");
+        System.out.println("\n7.Определение оценки по предметам");
         int percentHistory = 59;
         int percentProgramming = 91;
         int estimationHistory = 0;
