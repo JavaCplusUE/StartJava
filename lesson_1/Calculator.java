@@ -1,5 +1,4 @@
-public class Calculator
-{
+public class Calculator {
 	public static void main(String[] args) {
 		System.out.println("Калькулятор");
 		char sign = '*';
@@ -9,38 +8,32 @@ public class Calculator
 		
 		if(sign == '+'){
 		    result += numOne + numTwo;
-		}
-		
-		if(sign == '-'){
+		}		
+		else if(sign == '-'){
 		    result += numOne - numTwo;
-		}
-		
-		if(sign == '*'){
+		}		
+		else if(sign == '*'){
 		    result += numOne * numTwo;
-		}
-		
-		if(sign == '/'){
+		}		
+		else if(sign == '/'){
 		    result += (double)numOne / (double)numTwo;
 		    if(result % 1 != 0){
 		        System.out.println(numOne + " " + sign + " " + numTwo + " = " + result);
 		        return;
 		    }
-		}
-		
-		if(sign == '^'){
+		}	
+		else if(sign == '^'){
 		    if(numOne != 0 & numTwo != 0){
 		        result += numOne;
 		        for (int i = 1;i < numTwo ; i++ ){
                     result *= numOne;
                 }  
 		    }
-		}
-		
-		if(sign == '%'){
+		}	
+		else if(sign == '%'){
 		    result += numOne % numTwo;
 		}
 
-		System.out.println(numOne + " " + sign + " " + numTwo + " = " + (int)result);
-		
+		System.out.println(numOne + " " + sign + " " + numTwo + " = " + (int)result);		
 	}
 }
