@@ -36,23 +36,13 @@ public class VariablesTheme {
 
         System.out.println("\nЗадача 4 Отображение min и max значений числовых типов данных");
         byte maxByte = 127;
+        System.out.println("byte\n" + (maxByte) + "\n" + (++maxByte) + "\n" + (--maxByte));
         short maxShort = 32767;
+        System.out.println("short\n" + (maxShort) + "\n" + (++maxShort) + "\n" + (--maxShort));
         int maxInt = 2147483647;
+        System.out.println("int\n" + (maxInt) + "\n" + (++maxInt) + "\n" + (--maxInt));
         long maxLong = 9223372036854775807L;
-        System.out.println("Byte = " + maxByte + "\nShort = " + maxShort + 
-                "\nInt = " + maxInt + "\nLong = " + maxLong + "\n");
-        maxByte++;
-        maxShort++;
-        maxInt++;
-        maxLong++;
-        System.out.println("MaxByte = " + maxByte + "\nMaxShort = " + maxShort + 
-                "MaxInt = " + maxInt + "\nMaxLong = " + maxLong + "\n");
-        maxByte--;
-        maxShort--;
-        maxInt--;
-        maxLong--;
-        System.out.println("MinByte = " + maxByte + "\nMinShort = " + maxShort + 
-                "MinInt = " + maxInt + "\nMinLong = " + maxLong);
+        System.out.println("long\n" + (maxLong) + "\n" + (++maxLong) + "\n" + (--maxLong));
 
         System.out.println("\nЗадача 5 Перестановка значений переменных");
         int number1 = 2;
@@ -71,9 +61,9 @@ public class VariablesTheme {
         System.out.println("New first number = " + number1 + "\nNew second number = " + number2);
         System.out.println("Использование побитовой операции: \nThe first number = " +
                 number1 + "\nThe second number = " + number2);
-        number1 = number1 ^ number2;
-        number2 = number2 ^ number1;
-        number1 = number1 ^ number2;
+        number1 ^= number2;
+        number2 ^= number1;
+        number1 ^= number2;
         System.out.println("New first number = " + number1 + "\nNew second number = " + number2);
 
         System.out.println("\nЗадача 6 Вывод символов и их кодов");
@@ -99,16 +89,13 @@ public class VariablesTheme {
         char backslash = '\\';
         char leftOpenPParenthesis = '(';
         char rightClosePParenthesis = ')';
-        System.out.println("" + " " + " " + " " + " " + blackslash +
-                                backslash + " " + " " + " " + " ");
-        System.out.println("" + " " + " " + " " + blackslash + " " +
-                                " " + backslash + " " + " " + " " + " ");
-        System.out.println("" + " " + " " + blackslash + underline + leftOpenPParenthesis +
-                                " " + rightClosePParenthesis + backslash + " " + " " + " " + " ");
-        System.out.println("" + " " + blackslash + " " + " " + " " +
-                                " " + " " + " " + backslash + " " + " " + " " + " ");
+        System.out.println("    " + blackslash + backslash + "    ");
+        System.out.println("   " + blackslash + "  " + backslash + "    ");
+        System.out.println("  " + blackslash + underline + leftOpenPParenthesis +
+                " " + rightClosePParenthesis + backslash + "    ");
+        System.out.println(" " + blackslash + "   " + "   " + backslash + "    ");
         System.out.println("" + blackslash + underline + underline + underline + underline +
-                                " " + backslash + underline + underline + backslash + " " + " " + " " + " ");
+                blackslash + backslash + underline + underline + backslash + "    ");
 
         System.out.println("\nЗадача 9 Произведение и сумма цифр числа");
         number = 345;
