@@ -1,39 +1,38 @@
 public class Calculator {
-	public static void main(String[] args) {
-		System.out.println("Калькулятор");
-		char sign = '*';
-		int numOne = 5;
-		int numTwo = 7;
-		double result = 0;
-		
-		if(sign == '+'){
-		    result += numOne + numTwo;
-		}		
-		else if(sign == '-'){
-		    result += numOne - numTwo;
-		}		
-		else if(sign == '*'){
-		    result += numOne * numTwo;
-		}		
-		else if(sign == '/'){
-		    result += (double)numOne / (double)numTwo;
-		    if(result % 1 != 0){
-		        System.out.println(numOne + " " + sign + " " + numTwo + " = " + result);
-		        return;
-		    }
-		}	
-		else if(sign == '^'){
-		    if(numOne != 0 & numTwo != 0){
-		        result += numOne;
-		        for (int i = 1;i < numTwo ; i++ ){
-                    result *= numOne;
-                }  
-		    }
-		}	
-		else if(sign == '%'){
-		    result += numOne % numTwo;
-		}
+    public static void main(String[] args) {
+        System.out.println("Калькулятор");
+        char sign = '*';
+        int num1 = 5;
+        int num2 = 7;
+        double result = 0;
+        if(sign == '+') {
+            result += num1 + num2;
+        }
+        else if(sign == '-') {
+            result += num1 - num2;
+        }
+        else if(sign == '*') {
+            result += num1 * num2;
+        }
+        else if(sign == '/') {
+            result += (double) num1 / (double) num2;
+            if(result % 1 != 0) {
+                System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
+                return;
+            }
+        }
+        else if(sign == '^') {
+            if(num1 != 0 & num2 != 0) {
+                result += num1;
+                for (int i = 1;i < num2 ; i++ ) {
+                    result *= num1;
+                }
+            }
+        }
+        else if(sign == '%') {
+            result += num1 % num2;
+        }
 
-		System.out.println(numOne + " " + sign + " " + numTwo + " = " + (int)result);		
-	}
+        System.out.println(num1 + " " + sign + " " + num2 + " = " + (int) result);
+    }
 }
