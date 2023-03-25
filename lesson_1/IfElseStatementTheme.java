@@ -16,7 +16,7 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Мужской пол");
         }
-        if(height < 1.80) {
+        if (height < 1.80) {
             System.out.println("Рост меньше чем 1,80");
         } else {
             System.out.println("Рост не менее 1,80");
