@@ -20,18 +20,14 @@ public class Calculator {
                     result *= num1;
                 }
             }
-        }
-        else if(sign == '%') {
+        } else if (sign == '%') {
             result += num1 % num2;
         }
-            if (result % 1 != 0) {
-                System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
-                return;
-            } else {
-                System.out.println(num1 + " " + sign + " " + num2 + " = " + (int) result);
-            }
-
-
-
+        if (result % 1 != 0) {
+            System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
+            return;
+        } else {
+            System.out.println(num1 + " " + sign + " " + num2 + " = " + (int) result);
+        }
     }
 }
