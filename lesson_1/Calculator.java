@@ -15,13 +15,13 @@ public class Calculator {
             result = (double) num1 / (double) num2;
         } else if (sign == '^') {
             if (num1 != 0 & num2 != 0) {
-                result += num1;
+                result = num1;
                 for (int i = 1; i < num2; i++) {
                     result *= num1;
                 }
             }
         } else if (sign == '%') {
-            result += num1 % num2;
+            result = num1 % num2;
         }
         if (result % 1 != 0) {
             System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
