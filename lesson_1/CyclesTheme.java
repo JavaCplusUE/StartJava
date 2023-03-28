@@ -91,6 +91,7 @@ public class CyclesTheme {
             System.out.println();
         }
         System.out.println();
+		
         int row = 5;
         while (row >= 1) {
             int coll = 1;
@@ -102,6 +103,7 @@ public class CyclesTheme {
             row--;
         }
         System.out.println();
+		
         row = 5;
         int coll = 0;
         int buffer = coll;
