@@ -61,24 +61,24 @@ public class IfElseStatementTheme {
         System.out.println("\n4. Поиск одинаковых цифр в числах");
         number1 = 123;
         number2 = 223;
-        int rankThreeNumber1 = number1 % 10;
-        int rankThreeNumber2 = number2 % 10;
-        int rankTwoNumber1 = number1 / 10 % 10;
-        int rankTwoNumber2 = number2 / 10 % 10;
-        int rankOneNumber1 = number1 / 100;
-        int rankOneNumber2 = number2 / 100;
+        int unitNumber1 = number1 % 10;
+        int unitNumber2 = number2 % 10;
+        int tenNumber1 = number1 / 10 % 10;
+        int tenNumber2 = number2 / 10 % 10;
+        int hundredNumber1 = number1 / 100;
+        int hundredNumber2 = number2 / 100;
         System.out.println("Первое число = " + number1 + "\nВторое число = " + number2);
-        if (rankThreeNumber1 == rankThreeNumber2 || rankTwoNumber1 == rankTwoNumber2 ||
-                rankOneNumber1 == rankOneNumber2) {
+        if (unitNumber1 == unitNumber2 || tenNumber1 == tenNumber2 ||
+                hundredNumber1 == hundredNumber2) {
             System.out.println("Одинаковые числа: ");
-            if (rankThreeNumber1 == rankThreeNumber2) {
-                System.out.println(rankThreeNumber1 + " в третьем разряде ");
+            if (unitNumber1 == unitNumber2) {
+                System.out.println(unitNumber1 + " в третьем разряде ");
             }
-            if (rankTwoNumber1 == rankTwoNumber2) {
-                System.out.println(rankTwoNumber1 + " во втором разряде");
+            if (tenNumber1 == tenNumber2) {
+                System.out.println(tenNumber1 + " во втором разряде");
             }
-            if (rankOneNumber1 == rankOneNumber1) {
-                System.out.println(rankOneNumber1 + " в первом разряде");
+            if (hundredNumber1 == hundredNumber1) {
+                System.out.println(hundredNumber1 + " в первом разряде");
             }
         } else {
             System.out.println("Равных цифр нет");
