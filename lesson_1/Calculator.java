@@ -28,6 +28,5 @@ public class Calculator {
             return;
         }
         System.out.println(num1 + " " + sign + " " + num2 + " = " + (int) result);
-
     }
 }
