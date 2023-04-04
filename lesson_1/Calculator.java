@@ -1,7 +1,7 @@
 public class Calculator {
     public static void main(String[] args) {
         System.out.println("Калькулятор");
-        char sign = '*';
+        char sign = '/';
         int num1 = 5;
         int num2 = 7;
         double result = 0;
@@ -26,8 +26,8 @@ public class Calculator {
         if (result % 1 != 0) {
             System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
             return;
-        } else {
-            System.out.println(num1 + " " + sign + " " + num2 + " = " + (int) result);
         }
+        System.out.println(num1 + " " + sign + " " + num2 + " = " + (int) result);
+
     }
 }
