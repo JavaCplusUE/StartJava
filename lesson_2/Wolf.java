@@ -5,18 +5,22 @@ public class Wolf {
     int age;
     String color;
 
-    String move () {
+    String move() {
         return "Идёт";
     }
+	
     String sit() {
         return "Сидит";
     }
+	
     String run() {
         return "Бежит";
     }
+	
     String howl() {
         return "Воет";
     }
+	
     String hunt() {
         return "Охотиться";
     }
