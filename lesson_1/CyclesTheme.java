@@ -70,11 +70,10 @@ public class CyclesTheme {
         int copyNum = num;
         int numOnes = 0;
         while (num > 0) {
-            int digit = num % 10;
-            num /= 10;
-            if(digit == 2) {
-                numOnes++;        
+            if(num % 10 == 2) {
+                numOnes++;
             }
+            num /= 10;
         }
         System.out.print("число " + copyNum + " содержит ");
         if (numOnes % 2 == 0) {
@@ -91,7 +90,7 @@ public class CyclesTheme {
             System.out.println();
         }
         System.out.println();
-		
+
         int row = 5;
         while (row >= 1) {
             int coll = 1;
@@ -103,7 +102,7 @@ public class CyclesTheme {
             row--;
         }
         System.out.println();
-		
+
         row = 5;
         int coll = 0;
         int buffer = coll;
@@ -139,8 +138,11 @@ public class CyclesTheme {
             reverseNum = (reverseNum * 10) + (num % 10);
             num /= 10;
         }
+        System.out.print("число " + copyNum);
         if(copyNum == reverseNum) {
-            System.out.println("число " + copyNum + " является палиндромом");
+            System.out.println(" является палиндромом");
+        } else {
+            System.out.println(" не является палиндромом");
         }
 
         System.out.println("\n9. Определение, является ли число счастливым");
